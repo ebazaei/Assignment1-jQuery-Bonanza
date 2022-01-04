@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>jQuery- Assignment1 - Bonanza</title>
+    <style>
+        body{
+            font-size: 17px;
+            background-color: #fff;
+        }
+        header{
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        #container{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>jQuery- Assignment1 - Bonanza</h1>
+    </header>
+
+
+
+    <div id="container">
+
+        <div id='container'>
+
+                <button id='hideBtn'>Hide</button>
+                <button id='fadeInBtn'>Fade In</button>
+                <div id="fadingTxt" class="boxtest"> Box 1 is here ...</div>
+
+                <hr>
+
+                <button id="slideDownBtn">Slide Down</button>
+                <div id="slideTxt" style="display:none;" class="boxtest"> Box 2 is here </div>
+            <hr>
+    
+            <div id="appendBox" class="boxes">
+                <button id="appendBtn">Append</button>
+                <div id="appendTxt" class="boxtest"> Box 3 is here ...</div>
+            </div>
+
+            <hr>
+    
+            <div id="ColorBox" class="boxes">
+                <button id="ColorBtn">Change Color</button>
+                <div id="ColorTxt"  class="boxtest"> Change Color ...</div>
+            </div>
+
+    </div>
+    
+
+    <script src="./script.js"></script>
+
+
+
+    <script>
+        $(document).ready(function(){
+
+
+
+            $('#hideBtn').click(function(){
+                $('#fadingTxt').hide();
+            });
+
+
+
+            $('#fadeInBtn').click(function(){
+                $('#fadingTxt').fadeIn();
+            });
+
+
+
+            $('#appendBtn').click(function(){
+                $('#appendTxt').append('</p>'+' Append Text ...'+'</p>');
+            });
+
+
+
+
+            $('#slideDownBtn').mouseover(function(){
+                $('#slideTxt').slideDown();
+            });
+
+
+
+            $('#ColorBtn').click(function(){
+
+                $('#ColorTxt').css('background', '#000');
+                $('#ColorTxt').css('color', '#fff');
+
+            });
+        })
+
+    </script>
+</body>
+</html>
